@@ -44,7 +44,7 @@ class Card {
             }
         } else{
             if(enharmonicValues.indexOf(this.value) === 0){
-                enhPos = enharmonicValues.length
+                enhPos = enharmonicValues.length-1
             }else{
                 enhPos = enharmonicValues.indexOf(this.value) - 1 
             }
@@ -52,6 +52,7 @@ class Card {
         enhList = enharmonicValues
         enharmonicEquiv = enhList.splice(enhPos, enhList.length - enhPos)
         enharmonicEquiv.push(...enhList)
+        console.log(enharmonicEquiv)
         return enharmonicEquiv
     }   
     

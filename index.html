@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II Online</title>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="start-screen"class="overlay-text visible ">
+        <h1 class="startScreen">INTERVAL INITIATE</h1>
+        Click to Start
+    </div>
+    <div id="game-over" class="overlay-text">You got:
+        <span id="game-over-text" class="overlay-score"></span>
+        Click to Restart
+    </div>
+    <div id="container">
+        <header>
+            <h1 class="title">INTERVAL INITIATE</h1>
+        </header>
+        <div id="game">
+            <div class="game-info">
+                <div class="score text"></div>
+                <div class="time text"></div>
+            </div>
+            <div class="card-container">
+                <div class="from-card-slot card-slot"></div>
+                <div class="to-card-slot card-slot"></div>
+            </div>
+            <div class="keyboard-container">
+                <div class="keyboard-row">
+                    <button data-key="Triple Augmented 5th">AAA5</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Double Augmented 2nd">AA2</button>
+                    <button data-key="Double Augmented 3rd">AA3</button>
+                    <button data-key="Double Augmented 4th">AA4</button>
+                    <button data-key="Double Augmented 5th">AA5</button>
+                    <button data-key="Double Augmented 6th">AA6</button>
+                    <button data-key="Double Augmented 7th">AA7</button>
+                    <button data-key="Double Augmented 8th">AA8</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Augmented 2nd">A2</button>
+                    <button data-key="Augmented 3rd">A3</button>
+                    <button data-key="Augmented 4th">A4</button>
+                    <button data-key="Augmented 5th">A5</button>
+                    <button data-key="Augmented 6th">A6</button>
+                    <button data-key="Augmented 7th">A7</button>
+                    <button data-key="Augmented 8th">A8</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Major 2nd">M2</button>
+                    <button data-key="Major 3rd">M3</button>
+                    <button data-key="Perfect 4th">P4</button>
+                    <button data-key="Perfect 5th">P5</button>
+                    <button data-key="Major 6th">M6</button>
+                    <button data-key="Major 7th">M7</button>
+                    <button data-key="Perfect 8th">P8</button>            
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Minor 2nd">m2</button>
+                    <button data-key="Minor 3rd">m3</button>
+                    <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    <button data-key="Minor 6th">m6</button>
+                    <button data-key="Minor 7th">m7</button>
+                    <div class="spacer"></div>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Diminished 2nd">d2</button>
+                    <button data-key="Diminished 3rd">d3</button>
+                    <button data-key="Diminished 4th">d4</button>
+                    <button data-key="Diminished 5th">d5</button>
+                    <button data-key="Diminished 6th">d6</button>
+                    <button data-key="Diminished 7th">d7</button>
+                    <button data-key="Diminished 8th">d8</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Double Diminished 2nd">dd2</button>
+                    <button data-key="Double Diminished 3th">dd3</button>
+                    <button data-key="Double Diminished 4th">dd4</button>
+                    <button data-key="Double Diminished 5th">dd5</button>
+                    <button data-key="Double Diminished 6th">dd6</button>
+                    <button data-key="Double Diminished 7th">dd7</button>
+                    <button data-key="Double Diminished 8th">dd8</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-key="Triple Diminished 5th">ddd5</button>
+                </div>
+            </div>
+            <div class="check text"></div>
+            <div class="previous-guesses"></div>
+
+        </div>
+    </div> 
+    
+    
+</body>
+</html>

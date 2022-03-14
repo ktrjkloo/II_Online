@@ -1,0 +1,251 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height:100%;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+
+#container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+
+/* .deck{
+    height: 100%;
+    width: 50%;
+    border: 1px solid black;
+    grid-column: span 2;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: .5rem;
+    color: white;
+    background-color: black;
+    user-select: none;
+} */
+#game{
+    width:600px;
+}
+.game-info{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 9rem);
+    justify-content: space-around;
+}
+.text{
+    align-items: center;
+    justify-self: center;
+}
+
+.check{
+    width:100%;
+    grid-column: span 2;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0 10px; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.card-container{
+    display: grid;
+    margin: 10px 0 10px; 
+    grid-template-columns: repeat(2, 9rem);
+    grid-template-rows: 12rem;
+    gap: .5rem;    
+    justify-content: center;
+}
+.card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    user-select: none;
+}
+.card::before,
+.card::after{
+    position: absolute;
+    content: attr(data-value);
+    font-size: 2rem;
+}
+
+.card::before{
+    top: .5rem;
+    left: .5rem;
+}
+
+.card::after{
+    bottom: .5rem;
+    right: .5rem;
+    transform: rotate(180deg);
+}
+
+.card.C{
+    border: 4px solid #FF0000;
+}
+
+.card.CS{
+    border: 4px solid #FF8000;
+}
+
+.card.D{
+    border: 4px solid #FFFF00;
+}
+
+.card.DS{
+    border: 4px solid #80FF00;
+}
+
+.card.E{
+    border: 4px solid #00FF00;
+}
+
+.card.F{
+    border: 4px solid #00FF80;
+}
+
+.card.FS{
+    border: 4px solid #00FFFF;
+}
+
+.card.G{
+    border: 4px solid #0080FF;
+}
+
+.card.GS{
+    border: 4px solid #0000FF;
+}
+
+.card.A{
+    border: 4px solid #8000FF;
+}
+
+.card.AS{
+    border: 4px solid #FF00FF;
+}
+
+.card.B{
+    border: 4px solid #FF0080;
+}
+
+
+.keyboard-container{
+    margin: 20px 0 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation ;
+}
+
+.keyboard-row button{
+    font-family: inherit;
+    font-weight: bold;
+    height: 30px;
+    width: 40px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: rgb(129,131,132);
+    color: rgb(215,218,220);
+    margin: 0 5px;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.keyboard-row button:hover{
+    transform:scale(1.1);
+}
+
+.spacer{
+    height: 30px;
+    width: 40px;
+    margin: 0 5px;
+}
+
+
+#guess-correct{
+    color:#00FF00;
+}
+
+#guess-wrong{
+    color:#FF0000;
+}
+
+.previous-guesses{
+    text-align: center;
+}
+
+.overlay-text{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: gainsboro;
+    user-select: none;
+    
+}
+
+.startScreen{
+    font-size: 3em;
+    border-bottom: 1px solid gainsboro;
+}
+
+.overlay-score{
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+.overlay-text.visible{
+    display: flex;
+    flex-direction: column;
+    animation:overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from{
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0,0,0,0.95);
+        font-size: 2em;
+    }
+}
+
